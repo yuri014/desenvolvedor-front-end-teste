@@ -6,7 +6,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = {
   mode: 'development',
   devtool: 'inline-source-map',
-  entry: './src/app.js',
+  entry: ['@babel/polyfill', './src/app.js'],
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
@@ -58,7 +58,10 @@ module.exports = {
       filename: '[name].css',
     }),
     new CopyPlugin({
-      patterns: [{ from: 'public/assets', to: 'assets' }],
+      patterns: [
+        { from: 'public/assets', to: 'assets' },
+        { from: 'src/data', to: 'data' },
+      ],
     }),
   ],
 };
