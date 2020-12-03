@@ -21,7 +21,7 @@ header {
 
 h1 {
   font-style: italic;
-  font-size: clamp(1.6rem, 6vw, 2.4rem);
+  font-size: 24px;
   text-align: center;
   font-weight: 900;
 }
@@ -81,6 +81,31 @@ main {
         font-size: 18px;
         font-weight: 600;
         color: $caption;
+      }
+    }
+    & .price {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  header {
+    margin-top: 4rem;
+  }
+
+  main {
+    & label {
+      width: 22rem;
+    }
+    & section {
+      margin-top: 4rem;
+      display: grid;
+      grid-template-columns: 20rem 20rem;
+      justify-content: center;
+      -webkit-justify-content: center;
+      & .price {
+        display: block;
       }
     }
   }
