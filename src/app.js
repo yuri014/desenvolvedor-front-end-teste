@@ -22,3 +22,5 @@ const handleOrder = async () => {
 elements.requestNumber.addEventListener('keydown', (event) => {
   if (event.key === 'Enter') handleOrder();
 });
+
+elements.searchIcon.addEventListener('click', handleOrder);
