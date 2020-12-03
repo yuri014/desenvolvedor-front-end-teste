@@ -29,9 +29,10 @@
 
 ## Desenvolvimento
 
-> `npm i` para instalar as dependências.
-> `npm run dev` para criar um servidor local com Live Reload na porta 9000.
+> Comando: `npm i` para instalar as dependências.
+
+> Comando: `npm run dev` para criar um servidor local com Live Reload na porta 9000.
 
 ## Produção
 
-> `npm run build` para gerar a build uma única vez.
+> `npm run build` para gerar a build uma única vez na pasta dist. Poderá criar um servidor local para a pasta dist com o comando: `npx serve -s dist`
