@@ -1,0 +1,87 @@
+@import 'vars';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: $title;
+  font-family: $font;
+}
+
+header {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+h1 {
+  font-style: italic;
+  font-size: clamp(1.6rem, 6vw, 2.4rem);
+  text-align: center;
+  font-weight: 900;
+}
+
+main {
+  margin-top: 4rem;
+  & label {
+    width: 20rem;
+    margin: auto;
+    margin-top: 2rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 22px;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: space-between;
+    -webkit-align-items: center;
+    align-items: center;
+    border: 3px solid $input;
+    & input {
+      border: none;
+      width: 100%;
+      padding: 0 0.8rem;
+      font-size: 18px;
+      &:focus {
+        outline: thin dotted #ccc;
+      }
+      &::placeholder {
+        font-style: italic;
+        font-size: 18px;
+        text-align: center;
+        color: $placeholderColor;
+      }
+      &::-webkit-input-placeholder {
+        font-style: italic;
+        font-size: 18px;
+        text-align: center;
+        color: $placeholderColor;
+      }
+
+      &:-ms-input-placeholder {
+        font-style: italic;
+        font-size: 18px;
+        text-align: center;
+        color: $placeholderColor;
+      }
+    }
+  }
+  & section {
+    & * {
+      text-align: center;
+    }
+    & div {
+      margin-top: 2rem;
+      & i {
+        margin-top: 1rem;
+        font-size: 18px;
+        font-weight: 600;
+        color: $caption;
+      }
+    }
+  }
+}
