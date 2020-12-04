@@ -70,6 +70,17 @@ main {
       }
     }
   }
+  h3 {
+    color: rgb(226, 34, 34);
+    font-weight: 600;
+    font-size: 26px;
+    margin-top: 3em;
+    text-align: center;
+  }
+  .error {
+    display: none;
+  }
+
   & section {
     & * {
       text-align: center;
@@ -85,13 +96,6 @@ main {
     }
     & .price {
       display: none;
-    }
-
-    & h3 {
-      color: rgb(226, 34, 34);
-      font-weight: 600;
-      font-size: 26px;
-      margin-top: 3em;
     }
   }
 
@@ -142,9 +146,6 @@ main {
       & .price {
         display: block;
       }
-    }
-    .error {
-      display: block;
     }
   }
 }

@@ -2,11 +2,13 @@ import formatTimestamp from './formatTimestamp';
 import elements from './indexElements';
 
 export const handleError = () => {
-  elements.section.className = 'error';
-  elements.section.innerHTML = '<h3>Encomenda não <br /> encontrada!</h3><h3>Procure novamente</h3>';
+  elements.section.style.display = 'none';
+  elements.error.classList.remove('error');
 };
 
 export const handleSuccess = (order) => {
+  elements.section.style.display = 'grid';
+  elements.error.className = 'error';
   elements.section.classList.remove('loading');
   elements.name.innerText = `${order.cliente.id} - ${order.cliente.nome}`;
   elements.orderValue.innerText = new Intl.NumberFormat('pt-BR', {
